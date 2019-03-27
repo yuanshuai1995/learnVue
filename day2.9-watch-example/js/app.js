@@ -2,12 +2,13 @@ var watchExampleVM = new Vue({
     el: "#watch-example",
     data: {
         question: "",
-        answer: "Waiting for you to stop typing...",
-        img:null
+        answer: "正在等待你的输入完成...",
+        img:null,
+        ps:""
     },
     watch: {
         question: function (newQuestion, oldQuestion) {
-            this.answer = "Waiting for you to stop typing..."
+            this.answer = "正在等待你的输入完成..."
             this.debouncedGetAnswer()
         }
     },
@@ -17,15 +18,16 @@ var watchExampleVM = new Vue({
         // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
         // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
         // 请参考：https://lodash.com/docs#debounce
-        this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+        this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
     },
     methods: {
         getAnswer: function () {
             if (this.question.indexOf('?') === -1) {
-                this.answer = 'Questions usually contain a question mark. ;-)'
+                this.answer = '问题通常使用问号进行结尾~'
+                this.ps = "Ps:请用英文状态下的问号结尾"
                 return
             }
-            this.answer = "Thinking..."
+            this.answer = "I'm Thinking..."
             var vm = this
             axios.get('https://yesno.wtf/api')
                 .then(function (response) {

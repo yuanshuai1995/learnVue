@@ -2,20 +2,35 @@
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>请输入你的问题</title>
 </head>
-<body>
-<div id="watch-example">
-    <p>
-        Ask a yes/no question:
-        <input v-model="question">
+<body class="wrapper">
+<div class="bs-example" align="center"  style="margin-top: 5%" id="watch-example">
+    <p><img src="https://i.loli.net/2019/03/27/5c9b423a946bf.png"/></p>
+    <p class="input-group">
+        请你来问我一个简单的问题，我将会回答Yes or No.<br>
+        <input class="form-control" placeholder="请输入问题···" v-model="question">
     </p>
     <p>{{answer}}</p>
+    <small>{{ps}}</small>
     <p><img :src="img"></p>
 </div>
 </body>
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <script src="js/app.js"></script>
 </html>
