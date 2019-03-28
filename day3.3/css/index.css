@@ -1,0 +1,38 @@
+
+
+#header {
+    padding-top: 35px;
+    border-bottom: 1px solid #eee;
+}
+.clearfix, .row {
+    zoom: 1;
+}
+
+article, aside, footer, header, hgroup, main, nav, section  {
+    display: block;
+}
+body {
+    background-color: #fff;
+    color: #444;
+    font-family: "Droid Serif",Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Source Han Sans CN","WenQuanYi Micro Hei","Microsoft Yahei",serif;
+    font-size: 87.5%;
+}
+.clearfix:before, .row:before, .clearfix:after, .row:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after, .row:after {
+    clear: both;
+}
+.clearfix:before, .row:before, .clearfix:after, .row:after {
+    content: " ";
+    display: table;
+}
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.li-inline{
+    display:inline-block;
+}
